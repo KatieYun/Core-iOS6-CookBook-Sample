@@ -26,12 +26,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+-(void) viewWillAppear:(BOOL)animated {
     viewController = [[ViewController alloc] init];
     secondViewController = [[SecondViewController alloc] init];
+////    self.navigationController.title = @"Chapter01";
+//    [self.navigationItem setTitle:@"뒤로"];
+//    NSLog(@"%@", self.navigationItem.title);
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,12 +41,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) loadView {
+    [super loadView];
+    self.title = @"Chapter01";
+}
+
 -(IBAction)btn1Clicked {
-    [self.view addSubview:viewController.view];
+    [self.navigationController pushViewController:viewController animated:TRUE];
 }
 
 -(IBAction)btn2Clicked {
-    [self.view addSubview:secondViewController.view];
+    [self.navigationController pushViewController:secondViewController animated:TRUE];
 }
 
 

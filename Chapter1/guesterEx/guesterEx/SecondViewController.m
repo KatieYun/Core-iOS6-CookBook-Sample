@@ -48,12 +48,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) layoutFlowers
+{
+    // Move every flower into a new random place
+    CGFloat x = 67.0f;
+    CGFloat y = 102.0f;
+    
+    // Move every flower into a new random place
+    [UIView animateWithDuration:0.3f animations: ^(){
+        for (UIView *flowerDragger in self.view.subviews)
+            flowerDragger.center = CGPointMake(x, y);
+            }];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+     [self layoutFlowers];
+}
+
 -(void) loadView {
     [super loadView];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    [self loadBackButton];
+    self.title = @"CustomGesture";
+//    [self loadBackButton];
     NSString * sampleImageName = @"orangeFlower.png";
     DragView2 * dragView = [[DragView2 alloc] initWithImage:[UIImage imageNamed:sampleImageName]];
     

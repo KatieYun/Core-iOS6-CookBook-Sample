@@ -22,7 +22,9 @@
 //    SecondViewController *viewC = [[SecondViewController alloc] init];
     
     MainViewController *viewC = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    self.window.rootViewController = viewC;
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:viewC];
+    [navc setTitle:@"Chapter01"];
+    self.window.rootViewController = navc;
     [self.window makeKeyAndVisible];
     
     return YES;

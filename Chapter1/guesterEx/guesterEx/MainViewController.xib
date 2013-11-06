@@ -26,13 +26,6 @@
                         <action selector="btn2Clicked" destination="-1" eventType="touchUpInside" id="JKy-L2-nT3"/>
                     </connections>
                 </button>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MGt-sQ-rGJ">
-                    <rect key="frame" x="0.0" y="29" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Chapter 01" id="hnu-7P-zYG"/>
-                    </items>
-                </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btn_ex_1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsi-v7-9BI">
                     <rect key="frame" x="35" y="108" width="111" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
