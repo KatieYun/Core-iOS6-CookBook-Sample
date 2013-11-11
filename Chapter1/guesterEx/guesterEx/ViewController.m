@@ -30,6 +30,9 @@
 //    UINavigationItem *backBtn = [[UINavigationItem alloc] initWithTitle:@"뒤로"];
 //    [self.navigationItem.backBarButtonItem setTitle:@"aaaaa"];
 //    NSLog(@"%@", [self.navigationItem rightBarButtonItems]);
+    [self.navigationItem hidesBackButton];
+    UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] initWithTitle:@"뒤로" style:UIBarButtonItemStylePlain target:self action:@selector(backbuttonPressed)];
+    self.navigationItem.leftBarButtonItem = backBtn;
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -89,8 +92,6 @@
 //    
 //    [self.view addSubview:dragView];
     
-    
-    
     for (int i = 0; i < 10; i++)
 	{
 		DragView3 *flowerDragger = [[DragView3 alloc] initWithImage:[UIImage imageNamed:sampleImageName]];
@@ -136,7 +137,7 @@
 
 -(void) backbuttonPressed {
     NSLog(@"backbuttonPressed");
-    [self.view removeFromSuperview];
+    [self.navigationController popViewControllerAnimated:TRUE];
 }
 
 @end
